@@ -1,18 +1,7 @@
-.footer-con {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  z-index: 1000;
-}
-
 .footer-section {
   display: flex;
-  height: 200px;
+  height: 350px;
   background-color: #006dab;
-  max-width: 100%;
 }
 .footer-left {
   flex: 2;
@@ -51,11 +40,6 @@ tr td {
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
-}
-
-.footer-icon {
-  display: flex;
-  gap: 20px;
 }
 
 /* @media only screen and (max-width: 1366px) {

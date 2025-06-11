@@ -1,12 +1,15 @@
 .navbar {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 12px 32px;
+  height: 90px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
 }
-
 .navbar-container {
+  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
   display: flex;

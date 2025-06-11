@@ -6,7 +6,7 @@ import naver from '../assets/naver.svg';
 const Footer = () => {
   return (
     <div className="footer-con">
-      <div className="footer-section container">
+      <div className="footer-section ">
         <div className="footer-left">
           <div className="footer-logo">
             <img src={miniLogo} alt="logo" />
