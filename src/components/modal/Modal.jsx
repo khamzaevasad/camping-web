@@ -1,8 +1,8 @@
 import './Modal.css';
 
-const Modal = ({ children }) => {
+const Modal = ({ children, closeModal }) => {
   return (
-    <div className="modal-backdrop">
+    <div onClick={closeModal} className="modal-backdrop">
       <div className="modal">{children}</div>
     </div>
   );

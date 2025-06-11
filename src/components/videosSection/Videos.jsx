@@ -9,6 +9,9 @@ import { FaTimes, FaPlay } from 'react-icons/fa';
 
 const Videos = () => {
   const [showModal, setShowModal] = useState(false);
+  const closeModal = (e) => {
+    if (e.target.className === 'modal-backdrop') setShowModal(false);
+  };
 
   return (
     <div className="videos-container">
@@ -51,9 +54,9 @@ const Videos = () => {
       </div>
 
       {showModal && (
-        <Modal>
+        <Modal closeModal={closeModal}>
           <div className="video-name">
-            <p>Video Name</p>
+            <p>Name of the video</p>
             <button onClick={() => setShowModal(false)}>
               <FaTimes style={{ fontSize: '20px' }} />
             </button>
