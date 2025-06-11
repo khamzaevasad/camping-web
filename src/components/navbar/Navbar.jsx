@@ -5,7 +5,7 @@ import Modal from '../modal/Modal';
 import { useState } from 'react';
 import SignUp from '../signUp/SignUp';
 
-const Navbar = () => {
+const Navbar = ({ closeModal }) => {
   const [showModal, setShowmodal] = useState(false);
 
   const handleUser = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
       {showModal && (
-        <Modal setShowmodal={setShowmodal}>
+        <Modal closeModal={closeModal} setShowmodal={setShowmodal}>
           <SignUp setShowmodal={setShowmodal} />
         </Modal>
       )}
