@@ -41,7 +41,7 @@ const HeroSection = () => {
         }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop={true}
-        className="hero-swiper"
+        className="hero-swiper custom-hero-swiper"
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>

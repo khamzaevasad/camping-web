@@ -1,0 +1,75 @@
+.recommend-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  color: var(--text, #373737);
+  font-family: Gilroy, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-underline-offset: 10px;
+}
+
+/* Swiper carusel konfiguratsiyasi */
+.recommend-swiper {
+  padding-bottom: 40px;
+}
+
+/* Har bir slide uchun mos kenglik */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper navigatsiya tugmalari (optional style) */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #006dab;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #004d80;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white;
+}
+
+/* Bu nuqtalarni markazga va pastga joylaydi */
+.recommend-section .swiper-pagination {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* Nuqtalar o‘lchami va rangi */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  opacity: 1;
+  margin: 0 4px;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #006dab;
+}
