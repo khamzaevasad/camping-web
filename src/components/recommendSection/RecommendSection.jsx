@@ -21,7 +21,20 @@ const RecommendSection = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop={true}
         spaceBetween={20}
-        slidesPerView={4} // ekran o'lchamiga qarab o'zgaruvchi qilsang ham bo'ladi
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          821: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+        }}
         className="recommend-swiper"
       >
         {cards.map((_, index) => (

@@ -16,19 +16,16 @@
   text-underline-offset: 10px;
 }
 
-/* Swiper carusel konfiguratsiyasi */
 .recommend-swiper {
   padding-bottom: 40px;
 }
 
-/* Har bir slide uchun mos kenglik */
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Swiper navigatsiya tugmalari (optional style) */
 .swiper-button-prev,
 .swiper-button-next {
   color: #006dab;
@@ -50,7 +47,6 @@
   color: white;
 }
 
-/* Bu nuqtalarni markazga va pastga joylaydi */
 .recommend-section .swiper-pagination {
   position: absolute;
   bottom: -20px;
@@ -60,7 +56,6 @@
   z-index: 10;
 }
 
-/* Nuqtalar o‘lchami va rangi */
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -73,4 +68,56 @@
 
 .swiper-pagination-bullet-active {
   background-color: #006dab;
+}
+
+@media (max-width: 821px) {
+  .recommend-section {
+    padding: 40px 16px;
+  }
+
+  .main-heading {
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-underline-offset: 6px;
+  }
+
+  .recommend-swiper {
+    padding-bottom: 24px;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 431px) {
+  .recommend-section {
+    padding: 30px 12px;
+  }
+
+  .main-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }

@@ -8,6 +8,7 @@
   z-index: 1000;
   background-color: white;
 }
+
 .navbar-container {
   height: 100%;
   max-width: 1400px;
@@ -15,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 .nav-left,
@@ -28,15 +30,11 @@
   color: #0066cc;
   font-size: 24px;
   font-weight: 600;
-  margin-right: 16px;
 }
 
 .nav-item {
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
-
   color: #333;
   cursor: pointer;
   display: flex;
@@ -59,4 +57,48 @@
   font-size: 18px;
   color: #006dab;
   cursor: pointer;
+}
+
+
+.hamburger {
+  display: none;
+}
+
+
+@media (max-width: 821px) {
+  .nav-item {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 431px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .navbar-container {
+    padding: 0 12px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
 }

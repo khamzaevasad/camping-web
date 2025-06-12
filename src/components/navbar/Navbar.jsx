@@ -1,14 +1,40 @@
 import './Navbar.css';
-import navBottomIcon from '../assets/navbottom.svg'; // svg faylingiz src/components/navbar ichida bo'lishi kerak
+import navBottomIcon from '../assets/navbottom.svg';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  IconButton,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from 'react';
 
 const Navbar = ({ setModaltype, setShowModal }) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // iPad uchun (left sidebar), Phone uchun (right sidebar)
+  const isMobile = window.innerWidth <= 430;
+  const drawerAnchor = isMobile ? 'right' : 'left';
+
   return (
     <nav className="navbar">
       <div className="navbar-container ">
         <div className="nav-left">
+          {/* Hamburger menyu icon */}
+          <IconButton
+            onClick={() => setIsDrawerOpen(true)}
+            className="hamburger"
+            sx={{ display: { md: 'none' } }} // faqat mobilda ko'rinadi
+          >
+            <MenuIcon />
+          </IconButton>
+
           <h3 className="logo">Camper</h3>
-          <div className="nav-item ">
+
+          {/* Desktop nav-itemlar */}
+          <div className="nav-item">
             Motor <img src={navBottomIcon} alt="dropdown" />
           </div>
           <div className="nav-item">
@@ -38,6 +64,23 @@ const Navbar = ({ setModaltype, setShowModal }) => {
           </div>
         </div>
       </div>
+
+      {/* MUI Drawer */}
+      <Drawer
+        anchor={drawerAnchor}
+        open={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+      >
+        <List sx={{ width: 250 }}>
+          {["Motor", "Caravan", "Tuning", "Used Car", "Camping Place"].map(
+            (text) => (
+              <ListItem button key={text} onClick={() => setIsDrawerOpen(false)}>
+                <ListItemText primary={text} />
+              </ListItem>
+            )
+          )}
+        </List>
+      </Drawer>
     </nav>
   );
 };

@@ -1,26 +1,28 @@
 .main-blog {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .blog-container {
-  margin: 20px;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 20px;
   display: flex;
-  /* flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
+
 .blog-left {
-  padding: 15px 20px;
-  margin: 20px;
-  display: flex;
   flex: 1;
+  min-width: 280px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 10px 20px;
 }
 
 .blog-subtitle {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 12px;
   color: #333;
@@ -31,7 +33,7 @@
   line-height: 1.6;
   color: #555;
   margin-bottom: 16px;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .read-more {
@@ -46,22 +48,73 @@
 }
 
 .blog-right {
-  padding: 15px 20px;
-  margin: 20px;
   flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.blog-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 💻 desktop holatida 3 ta ustun */
   gap: 20px;
 }
+
 .blog-photos img {
   cursor: pointer;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  width: 100%;
+  height: auto;
 }
 
 .blog-photos img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   filter: brightness(1.1);
+}
+
+@media (max-width: 821px) {
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-left,
+  .blog-right {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .blog-subtitle {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .blog-description {
+    text-align: center;
+    font-size: 15px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 431px) {
+  .blog-right {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-subtitle {
+    font-size: 20px;
+  }
+
+  .blog-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }

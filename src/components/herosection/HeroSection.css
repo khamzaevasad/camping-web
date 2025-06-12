@@ -6,18 +6,15 @@
   margin-top: 50px;
 }
 
-/* Swiper container */
 .hero-swiper {
   width: 100%;
   height: 100%;
 }
 
-/* Har bir slide */
 .swiper-slide {
   position: relative;
 }
 
-/* Qoraytiruvchi overlay */
 .custom-hero-swiper .swiper-slide::after {
   content: '';
   position: absolute;
@@ -26,17 +23,15 @@
   z-index: 1;
 }
 
-/* Rasm */
 .carousel-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   position: relative;
-  z-index: 0; /* Rasm overlay ostida emas, orqada bo'lishi kerak */
+  z-index: 0;
 }
 
-/* Default swiper tugmalari uchun dumaloq style */
 .swiper-button-prev,
 .swiper-button-next {
   width: 40px;
@@ -54,17 +49,45 @@
   transform: translateY(-50%);
 }
 
-/* Tugmalar hover effekti */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: #006dab;
   color: white;
 }
 
-/* Tugmalar joylashuvi aniqligi uchun (optional) */
 .swiper-button-prev {
   left: 15px;
 }
 .swiper-button-next {
   right: 15px;
+}
+
+@media (max-width: 821px) {
+  .hero-carousel-container {
+    height: 400px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 431px) {
+  .hero-carousel-container {
+    height: 280px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .custom-hero-swiper .swiper-slide::after {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }

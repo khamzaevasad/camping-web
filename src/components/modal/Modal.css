@@ -14,3 +14,9 @@
   background-color: #fff;
   border-radius: 10px;
 }
+
+@media (max-width: 821px) {
+  .modal {
+    width: 400px;
+  }
+}
