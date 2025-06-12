@@ -2,12 +2,8 @@ import './SignUp.css';
 import naverLogo from '../assets/naver.png';
 import googleLogo from '../assets/google.png';
 import kakaoLogo from '../assets/kakao.png';
-import RegisterForm from '../register/RegisterForm';
-import { useState } from 'react';
 
-const SignUp = ({ setShowmodal }) => {
-  const [showForm, setShowForm] = useState(false);
-
+const SignUp = ({ setShowModal, setModalType }) => {
   return (
     <>
       <div className="login-container">
@@ -32,7 +28,7 @@ const SignUp = ({ setShowmodal }) => {
           </a>
         </div>
 
-        <button onClick={() => setShowmodal(false)} className="signin-btn">
+        <button onClick={() => setShowModal(false)} className="signin-btn">
           SIGN IN
         </button>
 
@@ -46,16 +42,10 @@ const SignUp = ({ setShowmodal }) => {
           <img src={kakaoLogo} alt="Kakao" />
         </div>
 
-        <button
-          onClick={() => {
-            setShowmodal(false), setShowForm(true);
-          }}
-          className="create-btn"
-        >
+        <button onClick={() => setModalType('register')} className="create-btn">
           CREATE ACCOUNT
         </button>
       </div>
-      {showForm && <RegisterForm />}
     </>
   );
 };

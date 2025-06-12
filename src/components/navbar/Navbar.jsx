@@ -1,17 +1,8 @@
 import './Navbar.css';
 import navBottomIcon from '../assets/navbottom.svg'; // svg faylingiz src/components/navbar ichida bo'lishi kerak
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
-import Modal from '../modal/Modal';
-import { useState } from 'react';
-import SignUp from '../signUp/SignUp';
 
-const Navbar = ({ closeModal }) => {
-  const [showModal, setShowmodal] = useState(false);
-
-  const handleUser = () => {
-    setShowmodal(true);
-  };
-
+const Navbar = ({ setModaltype, setShowModal }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container ">
@@ -34,17 +25,19 @@ const Navbar = ({ closeModal }) => {
 
         <div className="nav-right">
           <FaShoppingCart className="icon" />
-          <FaUser onClick={handleUser} className="icon" />
+          <FaUser
+            onClick={() => {
+              console.log('iconClick');
+              setModaltype('signup');
+              setShowModal(true);
+            }}
+            className="icon"
+          />
           <div className="nav-item">
             En <img src={navBottomIcon} alt="dropdown" />
           </div>
         </div>
       </div>
-      {showModal && (
-        <Modal closeModal={closeModal} setShowmodal={setShowmodal}>
-          <SignUp setShowmodal={setShowmodal} />
-        </Modal>
-      )}
     </nav>
   );
 };

@@ -1,11 +1,13 @@
 import './RegisterForm.css';
 
-const RegisterForm = () => {
+const RegisterForm = ({ setShowModal }) => {
   return (
     <div className="form-container">
       <div className="form-header">
         <h2>Registrate</h2>
-        <span className="close">&times;</span>
+        <span onClick={() => setShowModal(false)} className="close">
+          &times;
+        </span>
       </div>
       <form className="form">
         <label>Email</label>
