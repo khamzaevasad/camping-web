@@ -19,7 +19,6 @@ const HeroSection = () => {
 
   return (
     <div className="hero-carousel-container">
-      {/* Custom arrow buttons */}
       <button ref={prevRef} className="custom-swiper-button prev">
         &#8592;
       </button>
