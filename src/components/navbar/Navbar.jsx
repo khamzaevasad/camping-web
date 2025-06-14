@@ -10,11 +10,11 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = ({ setModaltype, setShowModal }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  // iPad uchun (left sidebar), Phone uchun (right sidebar)
   const isMobile = window.innerWidth <= 430;
   const drawerAnchor = isMobile ? 'right' : 'left';
 
@@ -22,31 +22,33 @@ const Navbar = ({ setModaltype, setShowModal }) => {
     <nav className="navbar">
       <div className="navbar-container ">
         <div className="nav-left">
-          {/* Hamburger menyu icon */}
           <IconButton
             onClick={() => setIsDrawerOpen(true)}
             className="hamburger"
-            sx={{ display: { md: 'none' } }} // faqat mobilda ko'rinadi
+            sx={{ display: { md: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
 
-          <h3 className="logo">Camper</h3>
+          <NavLink to="/home" className="logo">
+            Camper
+          </NavLink>
 
-          {/* Desktop nav-itemlar */}
-          <div className="nav-item">
+          <NavLink to="/motor" className="nav-item">
             Motor <img src={navBottomIcon} alt="dropdown" />
-          </div>
-          <div className="nav-item">
+          </NavLink>
+          <NavLink to="/caravan" className="nav-item">
             Caravan <img src={navBottomIcon} alt="dropdown" />
-          </div>
-          <div className="nav-item">
+          </NavLink>
+          <NavLink to="/tuning" className="nav-item">
             Tuning <img src={navBottomIcon} alt="dropdown" />
-          </div>
-          <div className="nav-item">
+          </NavLink>
+          <NavLink to="/usedcar" className="nav-item">
             Used Car <img src={navBottomIcon} alt="dropdown" />
-          </div>
-          <div className="nav-item">Camping Place</div>
+          </NavLink>
+          <NavLink to="/campingplase" className="nav-item">
+            Camping Place
+          </NavLink>
         </div>
 
         <div className="nav-right">
@@ -65,16 +67,19 @@ const Navbar = ({ setModaltype, setShowModal }) => {
         </div>
       </div>
 
-      {/* MUI Drawer */}
       <Drawer
         anchor={drawerAnchor}
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
       >
         <List sx={{ width: 250 }}>
-          {["Motor", "Caravan", "Tuning", "Used Car", "Camping Place"].map(
+          {['Motor', 'Caravan', 'Tuning', 'Used Car', 'Camping Place'].map(
             (text) => (
-              <ListItem button key={text} onClick={() => setIsDrawerOpen(false)}>
+              <ListItem
+                button
+                key={text}
+                onClick={() => setIsDrawerOpen(false)}
+              >
                 <ListItemText primary={text} />
               </ListItem>
             )
