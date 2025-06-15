@@ -1,0 +1,42 @@
+.motor-caravan {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../assets/caravan2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.motor-caravan p {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.motor-caravan h3 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.motor-caravan h2 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.motor-caravan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}

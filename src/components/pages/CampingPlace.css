@@ -1,0 +1,35 @@
+/* Motor Background */
+.camping-places {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../assets/campingng.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.camping-places p {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.camping-places h2 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.camping-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}

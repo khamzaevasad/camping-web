@@ -1,0 +1,20 @@
+.camp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media (max-width: 1024px) {
+  .camp-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tabletda 2ta */
+  }
+}
+
+@media (max-width: 640px) {
+  .camp-grid {
+    grid-template-columns: repeat(1, 1fr); /* Telefon uchun 1ta */
+  }
+}

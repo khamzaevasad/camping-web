@@ -1,0 +1,34 @@
+.motor-used {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../assets/usedcar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.motor-used p {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.motor-used h3 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.motor-used h2 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+}
