@@ -1,3 +1,4 @@
+/* Motor Background */
 .motor-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('../assets/bg3.png');
@@ -106,4 +107,83 @@
 
 .view-icon.active {
   border: 1.8px solid #1a73e8;
+}
+
+.motor-content > .sidebar-wrapper,
+.motor-content > .SideBar {
+  display: block;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .motor-content {
+    padding: 20px 30px;
+  }
+
+  .motor-content > .sidebar-wrapper,
+  .motor-content > .SideBar {
+    display: none;
+  }
+
+  .motor-bg {
+    height: 500px;
+  }
+
+  .motor-bg h2 {
+    font-size: 60px;
+  }
+
+  .motor-bg h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .motor-content {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+
+  .car-controls {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .car-filters {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .motor-bg {
+    height: 400px;
+    padding: 20px;
+  }
+
+  .motor-bg h2 {
+    font-size: 40px;
+  }
+
+  .motor-bg h3 {
+    font-size: 20px;
+  }
+
+  .motor-bg p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .motor-content {
+    padding: 10px 15px;
+  }
+
+  .motor-bg {
+    height: 350px;
+  }
+
+  .motor-bg h2 {
+    font-size: 35px;
+  }
 }

@@ -1,7 +1,38 @@
+/* Car List - Grid Layout */
 .car-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
   flex: 1;
+}
+
+/* ===== CAR LIST RESPONSIVE ===== */
+
+/* iPad (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Car list - 2 ustun */
+  .car-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 15px 0;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  /* Car list - 1 ustun */
+  .car-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px 0;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .car-list {
+    gap: 10px;
+    padding: 8px 0;
+  }
 }

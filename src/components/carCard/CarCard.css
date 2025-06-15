@@ -1,5 +1,5 @@
+/* Car Card */
 .car-card {
-  width: 220px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
@@ -8,6 +8,8 @@
   flex-direction: column;
   gap: 8px;
   transition: 0.3s ease;
+  width: 100%;
+  max-width: 100%;
 }
 
 .car-card:hover {
@@ -16,53 +18,17 @@
 
 .car-image {
   width: 100%;
-  height: auto;
+  height: 180px;
   object-fit: contain;
-  margin-bottom: 4px;
-}
-
-.car-name {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 2px;
-  color: #333;
-}
-
-.car-brand {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 2px;
-}
-
-.car-rating {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  color: #333;
-  gap: 4px;
   margin-bottom: 8px;
-}
-
-.car-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0077cc;
-  margin-bottom: 12px;
-}
-
-.car-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.car-card > *:not(.car-image) {
-  text-align: left;
+  border-radius: 8px;
 }
 
 .car-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 4px;
 }
 
 .car-name {
@@ -79,9 +45,96 @@
   gap: 4px;
   color: #333;
 }
-.car-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+
+.car-brand {
+  font-size: 13px;
+  color: #777;
   margin-bottom: 8px;
+  text-align: left;
+}
+
+.car-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077cc;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.car-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.car-buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+}
+
+.btn-primary:hover {
+  background-color: #1557b0;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f8ff;
+}
+
+/* ===== CAR CARD RESPONSIVE ===== */
+
+/* iPad (768px - 1024px) */
+@media (max-width: 1024px) {
+  .car-card {
+    padding: 14px;
+  }
+
+  .car-image {
+    height: 150px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .car-card {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .car-image {
+    height: 140px;
+  }
+
+  /* Buttons mobilda kichikroq */
+  .car-buttons button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .car-card {
+    padding: 10px;
+  }
+
+  .car-image {
+    height: 120px;
+  }
 }

@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import CardRecommend from '../cardRecommend/CardRecommend';
 
 const RecommendSection = () => {
-  const cards = [1, 2, 3, 4, 5]; // Demo uchun
+  const cards = [1, 2, 3, 4, 5];
   return (
     <section className="recommend-section">
       <h2 className="main-heading">Recommend</h2>

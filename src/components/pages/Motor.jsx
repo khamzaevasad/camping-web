@@ -14,7 +14,9 @@ const Motor = () => {
       </div>
 
       <div className="motor-content">
-        <SideBar />
+        <div className="sidebar-wrapper">
+          <SideBar />
+        </div>
 
         <div className="car-section">
           <div className="car-controls">
