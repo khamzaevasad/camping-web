@@ -11,32 +11,26 @@
   color: white;
 }
 
-motor-bg p {
+.motor-bg p {
   color: #fff;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 .motor-bg h3 {
   color: #fff;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 27px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .motor-bg h2 {
   color: #fff;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 80px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .motor-item {
@@ -44,4 +38,72 @@ motor-bg p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+
+.motor-content {
+  display: flex;
+  gap: 20px;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.car-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.car-count {
+  font-size: 15px;
+  color: #444;
+}
+
+.car-count b {
+  color: #1a73e8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.car-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.car-filters label {
+  font-size: 14px;
+  color: #555;
+}
+
+.car-filters select {
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.view-icon {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 5px 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.view-icon.active {
+  border: 1.8px solid #1a73e8;
 }
