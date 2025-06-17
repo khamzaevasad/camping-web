@@ -30,7 +30,7 @@ const Navbar = ({ setModaltype, setShowModal }) => {
             <MenuIcon />
           </IconButton>
 
-          <NavLink to="/home" className="logo">
+          <NavLink to="/" className="logo">
             Camper
           </NavLink>
 

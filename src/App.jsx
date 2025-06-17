@@ -29,7 +29,7 @@ function App() {
     <>
       <Navbar setModaltype={setModaltype} setShowModal={setShowModal} />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/motor" element={<Motor />} />
         <Route path="/caravan" element={<Caravan />} />
         <Route path="/tuning" element={<Tuning />} />
