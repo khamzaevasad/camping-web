@@ -24,8 +24,8 @@ const CampLocation = ({ image, title, location }) => {
           alt={title}
           sx={{
             width: '100%',
-            aspectRatio: '16 / 9', // 16:9 nisbati, avtomatik balandlik
-            objectFit: 'cover', // rasmni to‘liq ko‘rsatish
+            aspectRatio: '16 / 9',
+            objectFit: 'cover',
           }}
         />
         <CardContent>
